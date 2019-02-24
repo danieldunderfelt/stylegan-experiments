@@ -11,6 +11,8 @@ import argparse
 import hashlib
 import io
 import os
+import random
+import string
 import pickle
 import numpy as np
 from PIL import Image
@@ -45,7 +47,7 @@ def main(seed = '', model_name = 'faces', output = config.result_dir):
     if seed and len(seed) > 0:
         str = seed 
     else:
-        str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=N))
+        str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
 
     print('Using seed: ' + str)
 
