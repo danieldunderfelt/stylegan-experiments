@@ -75,7 +75,5 @@ if __name__ == "__main__":
     parser.add_argument('-o', '--output', default='', help='The output directory where you want the file.')
     parser.add_argument('-m', '--model', default='faces', choices=['faces', 'celebs', 'cats'], help='The model that should be used to generate the image.')
     args = parser.parse_args()
-    
-    print(args)
 
     main(seed=args.seed, model_name=args.model, output=args.output)
