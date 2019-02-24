@@ -1,0 +1,29 @@
+-i https://pypi.org/simple
+absl-py==0.7.0
+astor==0.7.1
+django==2.1.7
+gast==0.2.2
+get==2018.11.19
+grpcio==1.18.0
+h5py==2.9.0
+image==1.5.27
+keras-applications==1.0.7
+keras-preprocessing==1.0.9
+markdown==3.0.1
+mock==2.0.0
+numpy==1.16.1
+pbr==5.1.2
+pillow==5.4.1
+post==2018.11.20
+protobuf==3.6.1
+public==2018.11.20
+pytz==2018.9
+query-string==2018.11.20
+request==2018.11.20
+six==1.12.0
+tensorboard==1.12.2
+tensorflow-estimator==1.13.0
+tensorflow==1.13.0rc2
+termcolor==1.1.0
+werkzeug==0.14.1
+wheel==0.33.1 ; python_version >= '3'

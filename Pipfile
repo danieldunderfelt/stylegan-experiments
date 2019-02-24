@@ -9,7 +9,6 @@ verify_ssl = true
 tensorflow = "==1.13.0rc2"
 numpy = "*"
 image = "*"
-tensorflow-gpu = "==1.13.0rc2"
 request = "*"
 
 [requires]

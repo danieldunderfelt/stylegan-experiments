@@ -34,6 +34,17 @@ def main(seed = '', model_name = 'faces', output = config.result_dir):
 
     print('Using model: ' + model_name)
 
+    if seed and len(seed) > 0:
+        str = seed 
+    else:
+        str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+
+    print('Using seed: ' + str)
+
+    seed = int(hashlib.sha256(str.encode('utf-8')).hexdigest(), 16) % 10**5
+
+    print(seed)
+
     # Load pre-trained network.
     with open(model, 'rb') as f:
         _G, _D, Gs = pickle.load(f)
@@ -43,15 +54,6 @@ def main(seed = '', model_name = 'faces', output = config.result_dir):
 
     # Print network details.
     Gs.print_layers()
-
-    if seed and len(seed) > 0:
-        str = seed 
-    else:
-        str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
-
-    print('Using seed: ' + str)
-
-    seed = int(hashlib.sha256(str.encode('utf-8')).hexdigest(), 16) % 10**8
 
     # Pick latent vector.
     rnd = np.random.RandomState(seed)
