@@ -75,4 +75,4 @@ I have added a simple CLI that you can use to set a custom seed (it'll be random
 python simple.py --model cats --output generated_images the_seed_you_want_to_use
 ```
 
-If everythign works correctly you'll have an imaginary cat in ./generated_images. You're welcome.
+If everything works correctly you'll have an imaginary cat in ./generated_images. You're welcome.
