@@ -61,7 +61,7 @@ def draw_style_mixing_figure(png, Gs, w, h, src_seeds, dst_seeds, style_ranges):
 def main():
 	tflib.init_tf()
 	os.makedirs(config.result_dir, exist_ok=True)
-	draw_style_mixing_figure(os.path.join(config.result_dir, 'figure03-style-mixing.png'), load_Gs(config.model_cats), w=256, h=256, src_seeds=[639,123,687,615,2268,678], dst_seeds=[888,536,1898,1733,1614,251], style_ranges=[range(0,2)]+[range(2,4)]+[range(4,8)]+[range(8,10)]+[range(10,12)]+[range(12,14)])
+	draw_style_mixing_figure(os.path.join(config.result_dir, 'figure03-style-mixing.png'), load_Gs(config.model_celebs), w=1024, h=1024, src_seeds=[639,123,687,615,2268,678], dst_seeds=[888,536,1898,1733,1614,251], style_ranges=[range(0,2)]+[range(2,4)]+[range(4,8)]+[range(8,10)]+[range(10,12)]+[range(12,14)])
 
 #----------------------------------------------------------------------------
 
